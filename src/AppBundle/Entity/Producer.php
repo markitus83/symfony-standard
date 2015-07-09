@@ -8,8 +8,6 @@
 
 namespace AppBundle\Entity;
 
-
-use Doctrine\Common\Collections\ArrayCollection;
 use \DateTime;
 
 class Producer
@@ -25,11 +23,6 @@ class Producer
     protected $name;
 
     /**
-     * @var ArrayCollection
-     */
-    protected $movies;
-
-    /**
      * @var \DateTime
      */
     protected $createdAt;
@@ -38,10 +31,6 @@ class Producer
      * @var \DateTime
      */
     protected $updatedAt;
-
-    
-
-
 
     /**
      * Get id
