@@ -2,20 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: marc
- * Date: 6/07/15
- * Time: 18:26
+ * Date: 8/07/15
+ * Time: 22:55
  */
 
 namespace AppBundle\Entity;
 
+
+use Doctrine\Common\Collections\ArrayCollection;
 use \DateTime;
 
-class Person
+class Producer
 {
     /**
      * @var integer
-     *
-     * Id
      */
     protected $id;
 
@@ -23,6 +23,11 @@ class Person
      * @var string
      */
     protected $name;
+
+    /**
+     * @var ArrayCollection
+     */
+    protected $movies;
 
     /**
      * @var \DateTime
@@ -33,6 +38,8 @@ class Person
      * @var \DateTime
      */
     protected $updatedAt;
+
+    
 
 
 
@@ -50,7 +57,7 @@ class Person
      * Set name
      *
      * @param string $name
-     * @return Person
+     * @return Producer
      */
     public function setName($name)
     {

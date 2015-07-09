@@ -1,0 +1,38 @@
+AppBundle\Entity\Movie:
+    type: entity
+    table: movie
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            column: title
+            type: string
+            length: 45
+        synopsis:
+            column: sinopsis
+            type: string
+            length: 255
+    manyToMany:
+        actors:
+            targetEntity: AppBundle\Entity\Person
+            joinTable:
+                name: movies_actors
+                joinColumns:
+                    movie_id:
+                      referencedColumnName: id
+                inverseJoinColumns:
+                    actor_id:
+                      referencedColumnName: id
+    manyToOne:
+        director:
+            targetEntity: AppBundle\Entity\Person
+            joinColumn:
+                name: director_id
+                referencedColumnName: id
+        producer:
+            targetEntity: AppBundle\Entity\Producer
+            joinColumn:
+                name: producer_id
+                referencedColumnName: id
