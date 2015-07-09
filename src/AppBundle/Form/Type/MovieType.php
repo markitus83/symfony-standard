@@ -12,7 +12,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ProducerType extends AbstractType
+class MovieType extends AbstractType
 {
     public function configureOptions(OptionsResolver $optionsResolver)
     {
@@ -25,7 +25,13 @@ class ProducerType extends AbstractType
     {
         $builder
             ->add(
-                'name',
+                'title',
+                'text',
+                [
+                    'required' => true,
+                ])
+            ->add(
+                'synopsis',
                 'text',
                 [
                     'required' => true,

@@ -1,0 +1,15 @@
+{%  extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>PRODUCER :: list</h1>
+
+    <ul>
+        {% for producer in list %}
+            <li>Nº {{ loop.index }} :: {{ producer.name }} [<a href="{{ path('edit_producer', { 'idP': producer.id }) }}">Edit</a>]</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        <li><a href="{{ url('home') }}">HOME</a></li>
+    </ul>
+{% endblock %}

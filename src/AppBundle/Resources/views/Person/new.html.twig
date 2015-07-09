@@ -1,0 +1,15 @@
+{%  extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>PERSON :: new</h1>
+
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <ul>
+        <li><a href="{{ url('home') }}">HOME</a></li>
+    </ul>
+
+{% endblock %}

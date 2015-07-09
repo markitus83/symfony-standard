@@ -2,20 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: marc
- * Date: 6/07/15
- * Time: 18:26
+ * Date: 8/07/15
+ * Time: 22:55
  */
 
 namespace AppBundle\Entity;
 
 use \DateTime;
 
-class Person
+class Producer
 {
     /**
      * @var integer
-     *
-     * Id
      */
     protected $id;
 
@@ -34,8 +32,6 @@ class Person
      */
     protected $updatedAt;
 
-
-
     /**
      * Get id
      *
@@ -50,7 +46,7 @@ class Person
      * Set name
      *
      * @param string $name
-     * @return Person
+     * @return Producer
      */
     public function setName($name)
     {
@@ -67,10 +63,5 @@ class Person
     public function getName()
     {
         return $this->name;
-    }
-
-    public function __toString()
-    {
-        return $this->getName();
     }
 }

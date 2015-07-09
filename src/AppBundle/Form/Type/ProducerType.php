@@ -25,16 +25,11 @@ class ProducerType extends AbstractType
     {
         $builder
             ->setMethod('POST')
-            ->add(
-                'name',
-                'text',
-                [
-                    'required'  => true,
-                    'label'     => 'Name'
-                ])
-            ->add(
-                'save',
-                'submit');
+            ->add('name', 'text', [
+                'required'  => true,
+                'label'     => 'Name'
+            ])
+            ->add('save', 'submit');
     }
 
     public function getName()

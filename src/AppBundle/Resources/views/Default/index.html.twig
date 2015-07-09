@@ -2,4 +2,18 @@
 
 {% block body %}
     <h1>Welcome to movie catalog</h1>
+
+    <h4>Producers</h4>
+
+    {% for action, urlByAction in actions %}
+        <ul>
+            <li>{{ action }}</li>
+            <ul>
+            {% for url in urlByAction %}
+                <li><a href="{{ url.link }}">{{ url.label }}</a></li>
+            {% endfor %}
+            </ul>
+        </ul>
+    {% endfor %}
+
 {% endblock %}

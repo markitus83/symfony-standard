@@ -1,4 +1,40 @@
-hello:
-    path:      /
-    defaults:  { _controller: AppBundle:Default:index }
+home:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+new_producer:
+    path: /newProducer
+    defaults: { _controller: AppBundle:Producer:new}
+
+list_producers:
+    path: /listProducer
+    defaults: { _controller: AppBundle:Producer:list }
+
+edit_producer:
+    path: /editProducer/{idP}
+    defaults: { _controller: AppBundle:Producer:edit }
+
+new_person:
+    path: /newPerson
+    defaults: { _controller: AppBundle:Person:new}
+
+list_persons:
+    path: /listPerson
+    defaults: { _controller: AppBundle:Person:list }
+
+edit_person:
+    path: /editPerson/{idP}
+    defaults: { _controller: AppBundle:Person:edit }
+
+new_movie:
+    path: /newMovie
+    defaults: { _controller: AppBundle:Movie:new}
+
+list_movies:
+    path: /listMovie
+    defaults: { _controller: AppBundle:Movie:list }
+
+edit_movie:
+    path: /editMovie/{idP}
+    defaults: { _controller: AppBundle:Movie:edit }
 

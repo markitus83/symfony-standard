@@ -21,10 +21,10 @@ AppBundle\Entity\Movie:
                 name: movies_actors
                 joinColumns:
                     movie_id:
-                      referencedColumnName: id
+                        referencedColumnName: id
                 inverseJoinColumns:
                     actor_id:
-                      referencedColumnName: id
+                        referencedColumnName: id
     manyToOne:
         director:
             targetEntity: AppBundle\Entity\Person

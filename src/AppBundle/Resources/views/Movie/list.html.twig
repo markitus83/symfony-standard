@@ -1,0 +1,27 @@
+{%  extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>MOVIE :: list</h1>
+
+    <ul>
+        {% for movie in list %}
+            <li>Nº {{ loop.index }} :: {{ movie.title }} [<a href="{{ path('edit_movie', { 'idP': movie.id }) }}">Edit</a>]</li>
+            <ul>
+                <li>Synopsis :: {{  movie.synopsis }}</li>
+                <li>Directed By :: {{ movie.director }}</li>
+                <li>Actors ::
+                    <ul>
+                        {% for actor in movie.actors %}
+                            <li>{{ actor.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+            <br>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        <li><a href="{{ url('home') }}">HOME</a></li>
+    </ul>
+{% endblock %}

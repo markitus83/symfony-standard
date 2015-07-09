@@ -1,0 +1,15 @@
+{%  extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>PERSON :: list</h1>
+
+    <ul>
+        {% for person in list %}
+            <li>Nº {{ loop.index }} :: {{ person.name }} [<a href="{{ path('edit_person', { 'idP': person.id }) }}">Edit</a>]</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        <li><a href="{{ url('home') }}">HOME</a></li>
+    </ul>
+{% endblock %}
